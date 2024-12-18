@@ -1,0 +1,26 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "demo1-cq-server"
+  description: "Demo1 CQ server"
+  tags:
+    - java
+  links:
+    - url: https://devspaces.apps.cluster-x56f8.x56f8.sandbox2954.opentlc.com/?storageType=per-workspace#https://github.com/llowinge/demo1-demo1-cq-server-service
+      title: OpenShift Dev Spaces
+      icon: web
+    - url: https://hawtio-online-hawtio-operator.apps.cluster-x56f8.x56f8.sandbox2954.opentlc.com/online/discover?namespace=system=demo1
+      title: HawtIO
+      icon: web
+  annotations:
+    github.com/project-slug: "llowinge/demo1-demo1-cq-server-service"
+    backstage.io/kubernetes-id: "demo1-cq-server"
+    backstage.io/kubernetes-label-selector: "system=demo1"
+    janus-idp.io/tekton : "demo1-cq-server-service"
+spec:
+  type: service
+  lifecycle: experimental
+  owner: "group:default/backstage-admins"
+  system: system:default/demo1
+  providesApis: 
+    - demo1-openapi
