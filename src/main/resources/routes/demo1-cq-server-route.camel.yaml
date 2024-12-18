@@ -1,11 +1,10 @@
 - rest:
     openApi:
-      missingOperation: mock
       specification: demo1-openapi-api.json
 - route:
     id: sample-route
     from:
-      uri: direct:someOperationId
+      uri: direct:users
       parameters: {}
       steps:
         - log:
